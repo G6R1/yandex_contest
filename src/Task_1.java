@@ -34,6 +34,8 @@ public class Task_1 {
         }
     }
 }
+
+
 /*
 3
 Volozh,Arcady,Yurievich,11,2,1964
