@@ -1,23 +1,23 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Stack;
 
 public class Test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        generate(n * 2, 0, "");
-    }
+        PriorityQueue<Integer> maxs = new PriorityQueue<>();
+        maxs.add(5);
+        maxs.add(5);
+        maxs.add(5);
+        maxs.add(1);
+        maxs.add(2);
+        maxs.add(3);
 
-    private static void generate(int n, int a, String xs) {
-        if (n == 0) {
-            System.out.println(new StringBuilder(xs).reverse().toString());
-        } else if (n == a) {
-            generate(n - 1, a - 1, ")" + xs);
-        } else if (a == 0) {
-            generate(n - 1, a + 1, "(" + xs);
-        } else {
-            generate(n - 1, a + 1, "(" + xs);
-            generate(n - 1, a - 1, ")" + xs);
-        }
-    }
+        System.out.println(maxs);
+        System.out.println(maxs.peek());
+        maxs.poll();
+        maxs.add(7);
+        System.out.println(maxs);
 
+    }
 }
