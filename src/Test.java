@@ -5,19 +5,19 @@ import java.util.Stack;
 
 public class Test {
     public static void main(String[] args) {
-        PriorityQueue<Integer> maxs = new PriorityQueue<>();
-        maxs.add(5);
-        maxs.add(5);
-        maxs.add(5);
-        maxs.add(1);
-        maxs.add(2);
-        maxs.add(3);
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(1);
+        list1.add(1);
 
-        System.out.println(maxs);
-        System.out.println(maxs.peek());
-        maxs.poll();
-        maxs.add(7);
-        System.out.println(maxs);
+        list2.add(1);
+        list2.add(2);
+        list2.add(1);
+        list2.add(1);
+
+        System.out.println(list2.equals(list1));
 
     }
 }
